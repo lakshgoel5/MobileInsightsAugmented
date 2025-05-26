@@ -3,6 +3,9 @@
 import os
 import sys
 
+# Edited
+# sys.path.insert(0, "/home/mobileinsight/MobileInsightsAugmented/mobileinsight-core")
+
 """
 Offline analysis by replaying logs
 """
