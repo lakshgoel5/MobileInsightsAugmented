@@ -1,3 +1,8 @@
+#include <type_traits>
+#include <memory>
+#include <algorithm>
+#include <functional>
+
 #include "config.h"
 #include <epan/epan.h>
 #include <epan/packet.h>
