@@ -110,6 +110,18 @@ echo "Installing Wireshark dissector to ${PREFIX}/bin"
 sudo cp ws_dissector ${PREFIX}/bin/
 sudo chmod 755 ${PREFIX}/bin/ws_dissector
 
+
+echo "Compiling MobileInsight C++ extensions..."
+cd ${MOBILEINSIGHT_PATH}
+${PYTHON} setup.py build_ext --inplace
+if [ $? != 0 ]; then
+    echo "Error when compiling MobileInsight C++ extensions."
+    echo "You need to manually fix it before continuation. Exiting with status 5"
+    exit 5
+fi
+echo "MobileInsight C++ extensions compiled successfully!"
+
+
 echo "Installing dependencies for mobileinsight GUI..."
 
 # Update package list
@@ -163,6 +175,7 @@ echo "Dependencies installation completed!"
 echo "Installing mobileinsight-core..."
 cd ${MOBILEINSIGHT_PATH}
 echo "Installing mobileinsight-core using sudo, your password may be required..."
+sudo ${PYTHON} setup.py build_ext --inplace
 sudo ${PYTHON} setup.py install --break-system-packages
 
 echo "Installing GUI for MobileInsight..."
