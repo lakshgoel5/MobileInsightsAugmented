@@ -111,23 +111,59 @@ sudo cp ws_dissector ${PREFIX}/bin/
 sudo chmod 755 ${PREFIX}/bin/ws_dissector
 
 echo "Installing dependencies for mobileinsight GUI..."
-sudo apt-get -y install python-wxgtk3.0
-which pip3
-if [ $? != 0 ]; then
-    sudo apt-get -y install python3-pip
-fi
-if ${PIP} install matplotlib pyserial > /dev/null; then
-    echo "pyserial and matplotlib are successfully installed!"
+
+# Update package list
+sudo apt-get update
+
+# Install wxPython - try different package names
+echo "Installing wxPython..."
+if sudo apt-get -y install python3-wxgtk4.0; then
+    echo "python3-wxgtk4.0 installed successfully"
+elif sudo apt-get -y install python3-wx; then
+    echo "python3-wx installed successfully"
 else
-    echo "Installing pyserial and matplotlib using sudo, your password may be required..."
-    sudo ${PIP} install pyserial matplotlib
-    echo "pyserial and matplotlib are successfully installed!"
+    echo "Warning: Could not install wxPython via apt. You may need to install it manually."
 fi
+
+# Install other Python dependencies via system packages
+echo "Installing Python dependencies via system packages..."
+sudo apt-get -y install python3-matplotlib python3-serial python3-pip python3-setuptools python3-dev
+
+# Check if system packages worked
+python3 -c "import matplotlib, serial" 2>/dev/null
+
+if [ $? = 0 ]; then
+    echo "matplotlib and pyserial are successfully installed via system packages!"
+else
+    echo "Warning: Could not install matplotlib and pyserial via system packages."
+    echo "You may need to install them manually or check install script."
+fi
+# else
+#     echo "System packages not available, creating virtual environment..."
+    
+#     # Create virtual environment if system packages don't work
+#     python3 -m venv ~/mobileinsight-env
+#     source ~/mobileinsight-env/bin/activate
+    
+#     # Install via pip in virtual environment
+#     pip install matplotlib pyserial
+    
+#     if [ $? = 0 ]; then
+#         echo "matplotlib and pyserial installed in virtual environment!"
+#         echo "To use MobileInsight, activate the environment first:"
+#         echo "source ~/mobileinsight-env/bin/activate"
+#     else
+#         echo "Error: Could not install Python dependencies"
+#         exit 1
+#     fi
+# fi
+
+echo "Dependencies installation completed!"
 
 echo "Installing mobileinsight-core..."
 cd ${MOBILEINSIGHT_PATH}
 echo "Installing mobileinsight-core using sudo, your password may be required..."
-sudo ${PYTHON} setup.py install
+sudo ${PYTHON} setup.py install --break-system-packages
 
 echo "Installing GUI for MobileInsight..."
 cd ${MOBILEINSIGHT_PATH}
