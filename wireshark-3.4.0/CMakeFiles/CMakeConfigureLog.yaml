@@ -4185,3 +4185,221 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "tools/lemon/CMakeLists.txt:54 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test C_Wimplicit_fallthrough_VALID"
+    directories:
+      source: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-6LzXSq"
+      binary: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-6LzXSq"
+    cmakeVariables:
+      CMAKE_CXX_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_C_FLAGS: "-fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/="
+      CMAKE_C_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "C_Wimplicit_fallthrough_VALID"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-6LzXSq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_465ef/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_465ef.dir/build.make CMakeFiles/cmTC_465ef.dir/build
+        gmake[1]: Entering directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-6LzXSq'
+        Building C object CMakeFiles/cmTC_465ef.dir/src.c.o
+        /usr/bin/cc -DC_Wimplicit_fallthrough_VALID  -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  -fPIE   -Wimplicit-fallthrough -o CMakeFiles/cmTC_465ef.dir/src.c.o -c /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-6LzXSq/src.c
+        Linking C executable cmTC_465ef
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_465ef.dir/link.txt --verbose=1
+        /usr/bin/cc -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  CMakeFiles/cmTC_465ef.dir/src.c.o -o cmTC_465ef
+        gmake[1]: Leaving directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-6LzXSq'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "tools/lemon/CMakeLists.txt:54 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test C_Wsign_compare_VALID"
+    directories:
+      source: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-GIPgqI"
+      binary: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-GIPgqI"
+    cmakeVariables:
+      CMAKE_CXX_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_C_FLAGS: "-fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/="
+      CMAKE_C_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "C_Wsign_compare_VALID"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-GIPgqI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9d79f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9d79f.dir/build.make CMakeFiles/cmTC_9d79f.dir/build
+        gmake[1]: Entering directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-GIPgqI'
+        Building C object CMakeFiles/cmTC_9d79f.dir/src.c.o
+        /usr/bin/cc -DC_Wsign_compare_VALID  -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  -fPIE   -Wsign-compare -o CMakeFiles/cmTC_9d79f.dir/src.c.o -c /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-GIPgqI/src.c
+        Linking C executable cmTC_9d79f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d79f.dir/link.txt --verbose=1
+        /usr/bin/cc -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  CMakeFiles/cmTC_9d79f.dir/src.c.o -o cmTC_9d79f
+        gmake[1]: Leaving directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-GIPgqI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "tools/lemon/CMakeLists.txt:54 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test C_Wunused_parameter_VALID"
+    directories:
+      source: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-Hv8PHk"
+      binary: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-Hv8PHk"
+    cmakeVariables:
+      CMAKE_CXX_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_C_FLAGS: "-fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/="
+      CMAKE_C_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "C_Wunused_parameter_VALID"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-Hv8PHk'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bb834/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bb834.dir/build.make CMakeFiles/cmTC_bb834.dir/build
+        gmake[1]: Entering directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-Hv8PHk'
+        Building C object CMakeFiles/cmTC_bb834.dir/src.c.o
+        /usr/bin/cc -DC_Wunused_parameter_VALID  -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  -fPIE   -Wunused-parameter -o CMakeFiles/cmTC_bb834.dir/src.c.o -c /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-Hv8PHk/src.c
+        Linking C executable cmTC_bb834
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb834.dir/link.txt --verbose=1
+        /usr/bin/cc -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  CMakeFiles/cmTC_bb834.dir/src.c.o -o cmTC_bb834
+        gmake[1]: Leaving directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-Hv8PHk'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.30/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "wsutil/CMakeLists.txt:161 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_CAN_HANDLE_SSE4_2"
+    directories:
+      source: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-qBOIBq"
+      binary: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-qBOIBq"
+    cmakeVariables:
+      CMAKE_CXX_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_C_FLAGS: "-fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/="
+      CMAKE_C_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "COMPILER_CAN_HANDLE_SSE4_2"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-qBOIBq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cc5df/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_cc5df.dir/build.make CMakeFiles/cmTC_cc5df.dir/build
+        gmake[1]: Entering directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-qBOIBq'
+        Building C object CMakeFiles/cmTC_cc5df.dir/src.c.o
+        /usr/bin/cc -DCOMPILER_CAN_HANDLE_SSE4_2  -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  -fPIE   -msse4.2 -o CMakeFiles/cmTC_cc5df.dir/src.c.o -c /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-qBOIBq/src.c
+        cc: error: unrecognized command-line option '-msse4.2'
+        gmake[1]: *** [CMakeFiles/cmTC_cc5df.dir/build.make:78: CMakeFiles/cmTC_cc5df.dir/src.c.o] Error 1
+        gmake[1]: Leaving directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeScratch/TryCompile-qBOIBq'
+        gmake: *** [Makefile:127: cmTC_cc5df/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/modules/gmxTestLargeFiles.cmake:51 (TRY_COMPILE)"
+      - "CMakeLists.txt:1542 (gmx_test_large_files)"
+    directories:
+      source: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp"
+      binary: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_C_FLAGS: "-fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/="
+      CMAKE_C_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "FILE64_OK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_69877/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_69877.dir/build.make CMakeFiles/cmTC_69877.dir/build
+        gmake[1]: Entering directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_69877.dir/TestFileOffsetBits.c.o
+        /usr/bin/cc   -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  -fPIE -o CMakeFiles/cmTC_69877.dir/TestFileOffsetBits.c.o -c /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/TestFileOffsetBits.c
+        /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/TestFileOffsetBits.c:12:30: warning: ‘-Werror’ is not an option that controls warnings [-Wpragmas]
+           12 | #pragma GCC diagnostic error "-Werror"
+              |                              ^~~~~~~~~
+        Linking C executable cmTC_69877
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69877.dir/link.txt --verbose=1
+        /usr/bin/cc -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  CMakeFiles/cmTC_69877.dir/TestFileOffsetBits.c.o -o cmTC_69877
+        gmake[1]: Leaving directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/modules/gmxTestLargeFiles.cmake:104 (TRY_COMPILE)"
+      - "CMakeLists.txt:1542 (gmx_test_large_files)"
+    directories:
+      source: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp"
+      binary: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_C_FLAGS: "-fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/="
+      CMAKE_C_LINK_NO_PIE_SUPPORTED: "1"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "FSEEKO_COMPILE_OK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1e07c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1e07c.dir/build.make CMakeFiles/cmTC_1e07c.dir/build
+        gmake[1]: Entering directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_1e07c.dir/TestLargeFiles.c.o
+        /usr/bin/cc   -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  -fPIE -o CMakeFiles/cmTC_1e07c.dir/TestLargeFiles.c.o -c /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/TestLargeFiles.c
+        /home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/TestLargeFiles.c:14:30: warning: ‘-Werror’ is not an option that controls warnings [-Wpragmas]
+           14 | #pragma GCC diagnostic error "-Werror"
+              |                              ^~~~~~~~~
+        Linking C executable cmTC_1e07c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e07c.dir/link.txt --verbose=1
+        /usr/bin/cc -fvisibility=hidden  -fexcess-precision=fast -Wall -Wextra -Wendif-labels -Wpointer-arith -Wformat-security -fwrapv -fno-strict-overflow -Wvla -Waddress -Wattributes -Wdiv-by-zero -Wignored-qualifiers -Wpragmas -Wno-overlength-strings -Wno-long-long -Wframe-larger-than=32768 -Wc++-compat -Wunused-const-variable -Wshadow -Wold-style-definition -Wstrict-prototypes -Wlogical-op -Wjump-misses-init -Werror=implicit -Wno-pointer-sign -std=gnu99  -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/= -fmacro-prefix-map=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/=  CMakeFiles/cmTC_1e07c.dir/TestLargeFiles.c.o -o cmTC_1e07c
+        gmake[1]: Leaving directory '/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...

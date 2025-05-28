@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Path to a program.
+APPIMAGETOOL_EXECUTABLE:FILEPATH=APPIMAGETOOL_EXECUTABLE-NOTFOUND
+
 //Path to Asciidoctor or AsciidoctorJ
 ASCIIDOCTOR_EXECUTABLE:FILEPATH=ASCIIDOCTOR_EXECUTABLE-NOTFOUND
 
@@ -377,6 +380,9 @@ DISABLE_WERROR:BOOL=ON
 //Path to a program.
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
+//Path to a program.
+DPKG_BUILDPACKAGE_EXECUTABLE:FILEPATH=/usr/bin/dpkg-buildpackage
+
 //Group name for dumpcap (must exist)
 DUMPCAP_INSTALL_GROUP:STRING=wireshark
 
@@ -483,6 +489,9 @@ ENABLE_TSAN:BOOL=OFF
 //Enable UndefinedBehaviorSanitizer (UBSan) for debugging
 ENABLE_UBSAN:BOOL=OFF
 
+//No help, variable specified on the command line.
+ENABLE_WIRESHARK:UNINITIALIZED=OFF
+
 //Build with zlib compression support
 ENABLE_ZLIB:BOOL=ON
 
@@ -537,6 +546,9 @@ GTHREAD2_INCLUDE_DIR:PATH=/usr/include/glib-2.0
 //Path to a library.
 GTHREAD2_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libgthread-2.0.so
 
+//Path to the hardening-check utility.
+HARDENING_CHECK_EXECUTABLE:FILEPATH=HARDENING_CHECK_EXECUTABLE-NOTFOUND
+
 //Path to a file.
 ILBC_INCLUDE_DIR:PATH=ILBC_INCLUDE_DIR-NOTFOUND
 
@@ -566,6 +578,9 @@ LIBXML2_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libxml2.so
 
 //Path to a program.
 LIBXML2_XMLLINT_EXECUTABLE:FILEPATH=LIBXML2_XMLLINT_EXECUTABLE-NOTFOUND
+
+//Path to a program.
+LINUXDEPLOYQT_EXECUTABLE:FILEPATH=LINUXDEPLOYQT_EXECUTABLE-NOTFOUND
 
 //Path to a file.
 LUA_INCLUDE_DIR:PATH=LUA_INCLUDE_DIR-NOTFOUND
@@ -648,6 +663,15 @@ POD2HTML_EXECUTABLE:FILEPATH=/usr/bin/pod2html
 //Path to a program.
 POD2MAN_EXECUTABLE:FILEPATH=/usr/bin/pod2man
 
+//Location of Python module asn2wrs
+PY_ASN2WRS:STRING=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/tools/asn2wrs.py
+
+//Location of Python module make-plugin-reg
+PY_MAKE-PLUGIN-REG:STRING=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/tools/make-plugin-reg.py
+
+//Path to a program.
+RPMBUILD_EXECUTABLE:FILEPATH=RPMBUILD_EXECUTABLE-NOTFOUND
+
 //Path to a file.
 SBC_INCLUDE_DIR:PATH=SBC_INCLUDE_DIR-NOTFOUND
 
@@ -656,6 +680,9 @@ SBC_LIBRARY:FILEPATH=SBC_LIBRARY-NOTFOUND
 
 //Path to a program.
 SETCAP_EXECUTABLE:FILEPATH=/usr/sbin/setcap
+
+//Path to the shellcheck utility.
+SHELLCHECK_EXECUTABLE:FILEPATH=SHELLCHECK_EXECUTABLE-NOTFOUND
 
 //Path to a file.
 SMI_INCLUDE_DIR:PATH=SMI_INCLUDE_DIR-NOTFOUND
@@ -687,6 +714,9 @@ SYSTEMD_INCLUDE_DIR:PATH=SYSTEMD_INCLUDE_DIR-NOTFOUND
 //Path to a library.
 SYSTEMD_LIBRARY:FILEPATH=SYSTEMD_LIBRARY-NOTFOUND
 
+//Extra arguments to pass to test/test.py
+TEST_EXTRA_ARGS:STRING=
+
 //Always link statically with external libraries
 USE_STATIC:BOOL=OFF
 
@@ -713,6 +743,30 @@ capchild_LIB_DEPENDS:STATIC=general;wsutil;
 
 //Dependencies for the target
 caputils_LIB_DEPENDS:STATIC=general;wsutil;
+
+//Dependencies for the target
+epan_LIB_DEPENDS:STATIC=general;wiretap;general;wsutil;general;/usr/lib/aarch64-linux-gnu/libglib-2.0.so;general;/usr/lib/aarch64-linux-gnu/libcares.so;general;/usr/lib/aarch64-linux-gnu/libgcrypt.so;general;/usr/lib/aarch64-linux-gnu/libgpg-error.so;general;/usr/lib/aarch64-linux-gnu/libgthread-2.0.so;general;/usr/lib/aarch64-linux-gnu/libgnutls.so;general;m;general;/usr/lib/aarch64-linux-gnu/libxml2.so;general;/usr/lib/aarch64-linux-gnu/libz.so;
+
+//Dependencies for the target
+ethercat_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+g711_LIB_DEPENDS:STATIC=general;wsutil;
+
+//Dependencies for the target
+gryphon_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+irda_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+l16mono_LIB_DEPENDS:STATIC=general;wsutil;
+
+//Dependencies for the target
+mate_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+opcua_LIB_DEPENDS:STATIC=general;epan;
 
 //Path to a library.
 pkgcfg_lib_GNUTLS_gnutls:FILEPATH=/usr/lib/aarch64-linux-gnu/libgnutls.so
@@ -741,6 +795,36 @@ pkgcfg_lib_PC_PCAP_pcap:FILEPATH=/usr/lib/aarch64-linux-gnu/libpcap.so
 //Path to a library.
 pkgcfg_lib_ZLIB_z:FILEPATH=/usr/lib/aarch64-linux-gnu/libz.so
 
+//Dependencies for the target
+profinet_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+randpkt_core_LIB_DEPENDS:STATIC=general;ui;
+
+//Dependencies for the target
+stats_tree_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+transum_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+ui_LIB_DEPENDS:STATIC=general;wsutil;general;caputils;
+
+//Dependencies for the target
+unistim_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+usbdump_LIB_DEPENDS:STATIC=general;wiretap;
+
+//Dependencies for the target
+wimax_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+wimaxasncp_LIB_DEPENDS:STATIC=general;epan;
+
+//Dependencies for the target
+wimaxmacphy_LIB_DEPENDS:STATIC=general;epan;
+
 //Value Computed by CMake
 wireshark_BINARY_DIR:STATIC=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0
 
@@ -749,6 +833,12 @@ wireshark_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 wireshark_SOURCE_DIR:STATIC=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0
+
+//Dependencies for the target
+wiretap_LIB_DEPENDS:STATIC=general;wsutil;general;/usr/lib/aarch64-linux-gnu/libglib-2.0.so;general;/usr/lib/aarch64-linux-gnu/libz.so;
+
+//Dependencies for the target
+wsutil_LIB_DEPENDS:STATIC=general;dl;general;/usr/lib/aarch64-linux-gnu/libgmodule-2.0.so;general;/usr/lib/aarch64-linux-gnu/libglib-2.0.so;general;/usr/lib/aarch64-linux-gnu/libgcrypt.so;general;/usr/lib/aarch64-linux-gnu/libgpg-error.so;general;/usr/lib/aarch64-linux-gnu/libgnutls.so;general;m;
 
 
 ########################
@@ -949,7 +1039,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=158
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -994,6 +1084,8 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Test COMPILER_CAN_HANDLE_SSE4_2
+COMPILER_CAN_HANDLE_SSE4_2:INTERNAL=
 //Test CXX_Waddress_VALID
 CXX_Waddress_VALID:INTERNAL=1
 //Test CXX_Wall_VALID
@@ -1064,6 +1156,8 @@ C_Wframe_larger_than_32768_VALID:INTERNAL=1
 C_Wheader_guard_VALID:INTERNAL=
 //Test C_Wignored_qualifiers_VALID
 C_Wignored_qualifiers_VALID:INTERNAL=1
+//Test C_Wimplicit_fallthrough_VALID
+C_Wimplicit_fallthrough_VALID:INTERNAL=1
 //Test C_Wjump_misses_init_VALID
 C_Wjump_misses_init_VALID:INTERNAL=1
 //Test C_Wlogical_op_VALID
@@ -1084,10 +1178,14 @@ C_Wpragmas_VALID:INTERNAL=1
 C_Wshadow_VALID:INTERNAL=1
 //Test C_Wshorten_64_to_32_VALID
 C_Wshorten_64_to_32_VALID:INTERNAL=
+//Test C_Wsign_compare_VALID
+C_Wsign_compare_VALID:INTERNAL=1
 //Test C_Wstrict_prototypes_VALID
 C_Wstrict_prototypes_VALID:INTERNAL=1
 //Test C_Wunused_const_variable_VALID
 C_Wunused_const_variable_VALID:INTERNAL=1
+//Test C_Wunused_parameter_VALID
+C_Wunused_parameter_VALID:INTERNAL=1
 //Test C_Wvla_VALID
 C_Wvla_VALID:INTERNAL=1
 //Test C_fexcess_precision_fast_VALID
@@ -1098,6 +1196,8 @@ C_fmacro_prefix_map_old_new_VALID:INTERNAL=1
 C_fno_strict_overflow_VALID:INTERNAL=1
 //Test C_fwrapv_VALID
 C_fwrapv_VALID:INTERNAL=1
+//Build time data file location.
+DATAFILE_DIR:INTERNAL=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/run
 //ADVANCED property for variable: DOXYGEN_EXECUTABLE
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //STRINGS property for variable: DUMPCAP_INSTALL_OPTION
@@ -1108,6 +1208,8 @@ ENABLE_RPATH_ORIGIN-ADVANCED:INTERNAL=1
 EXECUTABLE_OUTPUT_PATH:INTERNAL=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/run
 //The extcap dir
 EXTCAP_INSTALL_LIBDIR:INTERNAL=lib/wireshark/extcap
+//Result of TRY_COMPILE
+FILE64_OK:INTERNAL=TRUE
 //Details about finding CARES
 FIND_PACKAGE_MESSAGE_DETAILS_CARES:INTERNAL=[/usr/lib/aarch64-linux-gnu/libcares.so][/usr/include][v1.33.0(1.5.0)]
 //Details about finding GCRYPT
@@ -1144,10 +1246,14 @@ FIND_PACKAGE_MESSAGE_DETAILS_SETCAP:INTERNAL=[/usr/sbin/setcap][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_YACC:INTERNAL=[/usr/bin/bison][v()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/aarch64-linux-gnu/libz.so][/usr/include][v()]
+//Result of TRY_COMPILE
+FSEEKO_COMPILE_OK:INTERNAL=TRUE
 //Test FVHIDDEN
 FVHIDDEN:INTERNAL=1
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//Result of test for large file support
+GMX_LARGEFILES:INTERNAL=1
 GNUTLS_CFLAGS:INTERNAL=-I/usr/include;-I/usr/include/p11-kit-1
 GNUTLS_CFLAGS_I:INTERNAL=
 GNUTLS_CFLAGS_OTHER:INTERNAL=
@@ -1193,6 +1299,8 @@ HAVE_ARPA_INET_H:INTERNAL=1
 HAVE_FCNTL_H:INTERNAL=1
 //Have symbol floorl
 HAVE_FLOORL:INTERNAL=1
+//64-bit fseeko is available
+HAVE_FSEEKO:INTERNAL=1
 //Have function getifaddrs
 HAVE_GETIFADDRS:INTERNAL=1
 //Have include getopt.h
@@ -1843,6 +1951,8 @@ PERL_EXECUTABLE-ADVANCED:INTERNAL=1
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//Build time plugin location.
+PLUGIN_DIR:INTERNAL=/home/mobileinsight/MobileInsightsAugmented/wireshark-3.4.0/run/plugins/3.4
 //The plugin dir
 PLUGIN_INSTALL_LIBDIR:INTERNAL=lib/wireshark/plugins
 //ADVANCED property for variable: POD2HTML_EXECUTABLE

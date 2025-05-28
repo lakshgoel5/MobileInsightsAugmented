@@ -632,7 +632,36 @@ dm_collector_c_feed_binary(PyObject *self, PyObject *args) {
          printf("dm_collector_c_feed_binary returns NULL\n");
         return NULL;
     }
-    feed_binary(b, length);
+    
+    // Add safety checks
+    if (b == NULL) {
+        PyErr_SetString(PyExc_ValueError, "Binary data pointer is NULL");
+        return NULL;
+    }
+    
+    if (length < 0) {
+        PyErr_SetString(PyExc_ValueError, "Length cannot be negative");
+        return NULL;
+    }
+    
+    if (length == 0) {
+        // Empty data, just return success
+        Py_RETURN_NONE;
+    }
+    
+    // Additional memory validation (optional but recommended)
+    printf("Debug: b=%p, length=%d\n", (void*)b, length);
+    
+    try {
+        feed_binary(b, length);
+    } catch (const std::exception& e) {
+        PyErr_SetString(PyExc_RuntimeError, e.what());
+        return NULL;
+    } catch (...) {
+        PyErr_SetString(PyExc_RuntimeError, "Unknown error in feed_binary");
+        return NULL;
+    }
+    
     Py_RETURN_NONE;
 }
 
