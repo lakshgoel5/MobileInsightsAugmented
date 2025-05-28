@@ -147,6 +147,7 @@ class DMCollector(Monitor):
                 decoded = dm_collector_c.receive_log_packet(self._skip_decoding,
                                                             True,   # include_timestamp
                                                             )
+                
                 if decoded:
                     try:
                         # packet = DMLogPacket(decoded)
@@ -154,9 +155,9 @@ class DMCollector(Monitor):
                             continue
                         packet = DMLogPacket(decoded[0])
                         type_id = packet.get_type_id()
-                        # print d["type_id"], d["timestamp"]
-                        # xml = packet.decode_xml()
-                        # print xml
+                        print(d["type_id"], d["timestamp"])
+                        xml = packet.decode_xml()
+                        print(xml)
                         # print ""
                         # Send event to analyzers
                         event = Event(timeit.default_timer(),
@@ -167,6 +168,8 @@ class DMCollector(Monitor):
                         # skip this packet
                         print(("FormatError: ", e))
 
+                else:
+                    print("not able to decode")
         except (KeyboardInterrupt, RuntimeError) as e:
             print(("\n\n%s Detected: Disabling all logs" % type(e).__name__))
             # Disable logs

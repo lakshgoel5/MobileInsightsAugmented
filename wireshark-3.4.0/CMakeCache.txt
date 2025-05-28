@@ -27,10 +27,10 @@ BCG729_INCLUDE_DIR:PATH=BCG729_INCLUDE_DIR-NOTFOUND
 BCG729_LIBRARY:FILEPATH=BCG729_LIBRARY-NOTFOUND
 
 //Path to a library.
-BROTLIDEC_LIBRARY:FILEPATH=BROTLIDEC_LIBRARY-NOTFOUND
+BROTLIDEC_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libbrotlidec.so
 
 //Path to a file.
-BROTLI_INCLUDE_DIR:PATH=BROTLI_INCLUDE_DIR-NOTFOUND
+BROTLI_INCLUDE_DIR:PATH=/usr/include
 
 //Build androiddump
 BUILD_androiddump:BOOL=ON
@@ -745,7 +745,7 @@ capchild_LIB_DEPENDS:STATIC=general;wsutil;
 caputils_LIB_DEPENDS:STATIC=general;wsutil;
 
 //Dependencies for the target
-epan_LIB_DEPENDS:STATIC=general;wiretap;general;wsutil;general;/usr/lib/aarch64-linux-gnu/libglib-2.0.so;general;/usr/lib/aarch64-linux-gnu/libcares.so;general;/usr/lib/aarch64-linux-gnu/libgcrypt.so;general;/usr/lib/aarch64-linux-gnu/libgpg-error.so;general;/usr/lib/aarch64-linux-gnu/libgthread-2.0.so;general;/usr/lib/aarch64-linux-gnu/libgnutls.so;general;m;general;/usr/lib/aarch64-linux-gnu/libxml2.so;general;/usr/lib/aarch64-linux-gnu/libz.so;
+epan_LIB_DEPENDS:STATIC=general;wiretap;general;wsutil;general;/usr/lib/aarch64-linux-gnu/libglib-2.0.so;general;/usr/lib/aarch64-linux-gnu/libbrotlidec.so;general;/usr/lib/aarch64-linux-gnu/libcares.so;general;/usr/lib/aarch64-linux-gnu/libgcrypt.so;general;/usr/lib/aarch64-linux-gnu/libgpg-error.so;general;/usr/lib/aarch64-linux-gnu/libgthread-2.0.so;general;/usr/lib/aarch64-linux-gnu/libgnutls.so;general;m;general;/usr/lib/aarch64-linux-gnu/libxml2.so;general;/usr/lib/aarch64-linux-gnu/libz.so;
 
 //Dependencies for the target
 ethercat_LIB_DEPENDS:STATIC=general;epan;
@@ -1210,6 +1210,8 @@ EXECUTABLE_OUTPUT_PATH:INTERNAL=/home/mobileinsight/MobileInsightsAugmented/wire
 EXTCAP_INSTALL_LIBDIR:INTERNAL=lib/wireshark/extcap
 //Result of TRY_COMPILE
 FILE64_OK:INTERNAL=TRUE
+//Details about finding BROTLI
+FIND_PACKAGE_MESSAGE_DETAILS_BROTLI:INTERNAL=[/usr/lib/aarch64-linux-gnu/libbrotlidec.so][/usr/include][v()]
 //Details about finding CARES
 FIND_PACKAGE_MESSAGE_DETAILS_CARES:INTERNAL=[/usr/lib/aarch64-linux-gnu/libcares.so][/usr/include][v1.33.0(1.5.0)]
 //Details about finding GCRYPT
@@ -1239,7 +1241,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[/usr/bin/perl][v5.38.2()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3][cfound components: Interpreter ][v3.12.7(3.4)]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3][cfound components: Interpreter ][v3.10.13(3.4)]
 //Details about finding SETCAP
 FIND_PACKAGE_MESSAGE_DETAILS_SETCAP:INTERNAL=[/usr/sbin/setcap][v()]
 //Details about finding YACC
@@ -2090,7 +2092,7 @@ _Python3_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
 _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;7;64;32;<none>;cpython-312-aarch64-linux-gnu;abi3;/usr/lib/python3.12;/usr/lib/python3.12;/usr/local/lib/python3.12/dist-packages;/usr/local/lib/python3.12/dist-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;13;64;32;<none>;cpython-310-aarch64-linux-gnu;abi3;/usr/local/lib/python3.10;/usr/local/lib/python3.10;/usr/local/lib/python3.10/site-packages;/usr/local/lib/python3.10/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=4c8bfa8951e99fa32e4000a94f8c04a2
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
